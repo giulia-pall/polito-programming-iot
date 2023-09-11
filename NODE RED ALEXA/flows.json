@@ -1,0 +1,560 @@
+[
+    {
+        "id": "7bbea23c199d8e7e",
+        "type": "tab",
+        "label": "node-red-alexa-event",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d8650550e2f6de4f",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt.eclipseprojects.io",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "a73f4eea54175391",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt3.thingspeak.com",
+        "port": "1883",
+        "clientid": "Eh8QHycPBQMWFDYoEDshNzc",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "0cd004c028733db0",
+        "type": "alexa-remote-account",
+        "name": "Account initialization",
+        "authMethod": "proxy",
+        "proxyOwnIp": "192.168.1.53",
+        "proxyPort": "3455",
+        "cookieFile": "C:\\Users\\39392\\Desktop/config/prova.cookie",
+        "refreshInterval": "3",
+        "alexaServiceHost": "alexa.amazon.it",
+        "amazonPage": "amazon.it",
+        "acceptLanguage": "it-IT",
+        "userAgent": "",
+        "useWsMqtt": "on",
+        "autoInit": "off"
+    },
+    {
+        "id": "0d94f7a519aa491a",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f84ea686c27aa70f",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "36483421bf0ce2ea",
+        "type": "alexa-remote-routine",
+        "z": "7bbea23c199d8e7e",
+        "name": "",
+        "account": "0cd004c028733db0",
+        "routineNode": {
+            "type": "speak",
+            "payload": {
+                "type": "regular",
+                "text": {
+                    "type": "msg",
+                    "value": "payload"
+                },
+                "devices": [
+                    "G090XG1103360BCD"
+                ]
+            }
+        },
+        "x": 840.9999923706055,
+        "y": 198.99999046325684,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e13f29bfe91aa9ab",
+        "type": "http request",
+        "z": "7bbea23c199d8e7e",
+        "name": "Temperature",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.thingspeak.com/channels/2249248/fields/1.json?results=1",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 490.99999237060547,
+        "y": 198.99999046325684,
+        "wires": [
+            [
+                "b6a766aafbb15e82",
+                "247c4d37be3a849d"
+            ]
+        ]
+    },
+    {
+        "id": "43aa324dd88ff821",
+        "type": "alexa-remote-init",
+        "z": "7bbea23c199d8e7e",
+        "name": "",
+        "account": "0cd004c028733db0",
+        "option": "initialise",
+        "x": 240,
+        "y": 60,
+        "wires": [
+            [
+                "dcf0decaea1bd353"
+            ]
+        ]
+    },
+    {
+        "id": "dcf0decaea1bd353",
+        "type": "debug",
+        "z": "7bbea23c199d8e7e",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 410,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "b6a766aafbb15e82",
+        "type": "debug",
+        "z": "7bbea23c199d8e7e",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660.9999923706055,
+        "y": 138.99999046325684,
+        "wires": []
+    },
+    {
+        "id": "247c4d37be3a849d",
+        "type": "function",
+        "z": "7bbea23c199d8e7e",
+        "name": "function 1",
+        "func": "var msg = { payload: msg.payload.feeds[0].field1 };\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660.9999923706055,
+        "y": 198.99999046325684,
+        "wires": [
+            [
+                "8d5b4b6e5d75fef8",
+                "36483421bf0ce2ea"
+            ]
+        ]
+    },
+    {
+        "id": "8d5b4b6e5d75fef8",
+        "type": "debug",
+        "z": "7bbea23c199d8e7e",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840.9999923706055,
+        "y": 138.99999046325684,
+        "wires": []
+    },
+    {
+        "id": "82c79bcfe19f8f30",
+        "type": "inject",
+        "z": "7bbea23c199d8e7e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "alexa",
+        "payloadType": "flow",
+        "x": 100,
+        "y": 60,
+        "wires": [
+            [
+                "43aa324dd88ff821"
+            ]
+        ]
+    },
+    {
+        "id": "387977dc50dc05fa",
+        "type": "alexa-remote-event",
+        "z": "7bbea23c199d8e7e",
+        "name": "",
+        "account": "0cd004c028733db0",
+        "event": "ws-device-activity",
+        "x": 130.99999237060547,
+        "y": 198.99999046325684,
+        "wires": [
+            [
+                "e9b24c2e7ff4f6b3",
+                "eb63637d453a5cb9",
+                "45faeb5a07cfbcba",
+                "637bc730640675bb"
+            ]
+        ]
+    },
+    {
+        "id": "e9b24c2e7ff4f6b3",
+        "type": "debug",
+        "z": "7bbea23c199d8e7e",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 300.99999237060547,
+        "y": 138.99999046325684,
+        "wires": []
+    },
+    {
+        "id": "eb63637d453a5cb9",
+        "type": "function",
+        "z": "7bbea23c199d8e7e",
+        "name": "function 2",
+        "func": "var msg = { payload: msg.payload.description.summary };\nif (msg.payload === \"alexa aquarium temperature\") {\n    return msg;\n} else {\n    null\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320.99999237060547,
+        "y": 198.99999046325684,
+        "wires": [
+            [
+                "a99068e601ec170f",
+                "e13f29bfe91aa9ab"
+            ]
+        ]
+    },
+    {
+        "id": "a99068e601ec170f",
+        "type": "debug",
+        "z": "7bbea23c199d8e7e",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480.99999237060547,
+        "y": 138.99999046325684,
+        "wires": []
+    },
+    {
+        "id": "d4f4b58c18d60b50",
+        "type": "alexa-remote-routine",
+        "z": "7bbea23c199d8e7e",
+        "name": "",
+        "account": "0cd004c028733db0",
+        "routineNode": {
+            "type": "speak",
+            "payload": {
+                "type": "regular",
+                "text": {
+                    "type": "msg",
+                    "value": "payload"
+                },
+                "devices": [
+                    "G090XG1103360BCD"
+                ]
+            }
+        },
+        "x": 840.9999923706055,
+        "y": 318.99999046325684,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "93ca18e551ba072a",
+        "type": "http request",
+        "z": "7bbea23c199d8e7e",
+        "name": "Luce",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.thingspeak.com/channels/2249248/fields/2.json?results=1",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 470.99999237060547,
+        "y": 318.99999046325684,
+        "wires": [
+            [
+                "13e71d122ceba8eb",
+                "48bbfb52b9c37463"
+            ]
+        ]
+    },
+    {
+        "id": "13e71d122ceba8eb",
+        "type": "function",
+        "z": "7bbea23c199d8e7e",
+        "name": "function 3",
+        "func": "var msg = { payload: msg.payload.feeds[0].field2 };\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660.9999923706055,
+        "y": 318.99999046325684,
+        "wires": [
+            [
+                "d4f4b58c18d60b50"
+            ]
+        ]
+    },
+    {
+        "id": "45faeb5a07cfbcba",
+        "type": "function",
+        "z": "7bbea23c199d8e7e",
+        "name": "function 4",
+        "func": "var msg = { payload: msg.payload.description.summary };\nif (msg.payload === \"alexa aquarium waterlevel\") {\n    return msg;\n} else {\n    null\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320.99999237060547,
+        "y": 318.99999046325684,
+        "wires": [
+            [
+                "93ca18e551ba072a",
+                "fed65fbdc2edfd37"
+            ]
+        ]
+    },
+    {
+        "id": "fed65fbdc2edfd37",
+        "type": "debug",
+        "z": "7bbea23c199d8e7e",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470.99999237060547,
+        "y": 258.99999046325684,
+        "wires": []
+    },
+    {
+        "id": "48bbfb52b9c37463",
+        "type": "debug",
+        "z": "7bbea23c199d8e7e",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660.9999923706055,
+        "y": 258.99999046325684,
+        "wires": []
+    },
+    {
+        "id": "637bc730640675bb",
+        "type": "debug",
+        "z": "7bbea23c199d8e7e",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.description.summary",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 280,
+        "y": 400,
+        "wires": []
+    }
+]
