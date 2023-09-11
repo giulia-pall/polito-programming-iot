@@ -1,0 +1,233 @@
+{
+  "projectOwner": "Group_nine",
+  "projectName": "SmartAquarium",
+  "lastUpdate": "2022-12-16 10:47",
+  "topicAdd": "IoT/telegram/entity/add",
+  "address": {
+    "host": "127.0.0.1",
+    "port": 8080
+  },
+  "defaultDevicesList": [
+    {
+      "deviceName": "DHT11",
+      "measureType": [
+        "Temperature"
+      ],
+      "availableServices": [
+        "MQTT",
+        "REST"
+      ],
+      "servicesDetails": [
+        {
+          "serviceType": "MQTT",
+          "topics": [
+            {
+              "topic": "IoT/{aquarium_id}/sensors/temperature",
+              "type": "Publisher"
+            }
+          ]
+        },
+        {
+          "serviceType": "REST",
+          "serviceIP": "dht11.org:8080"
+        }
+      ],
+      "connectedTo": "Arduino",
+      "port": "17",
+      "lastUpdate": "2023-08-13"
+    },
+    {
+      "deviceName": "HALJIA",
+      "measureType": [
+        "Water Level"
+      ],
+      "availableServices": [
+        "MQTT",
+        "REST"
+      ],
+      "servicesDetails": [
+        {
+          "serviceType": "MQTT",
+          "topics": [
+            {
+              "topic": "IoT/{aquarium_id}/sensors/waterlevel",
+              "type": "Publisher"
+            }
+          ]
+        },
+        {
+          "serviceType": "REST",
+          "serviceIP": "haljia.org:8080"
+        }
+      ],
+      "connectedTo": "Arduino",
+      "port": "A1",
+      "lastUpdate": "2023-08-13"
+    },
+    {
+      "deviceName": "Adafruit161",
+      "measureType": [
+        "Light"
+      ],
+      "availableServices": [
+        "MQTT",
+        "REST"
+      ],
+      "servicesDetails": [
+        {
+          "serviceType": "MQTT",
+          "topics": [
+            {
+              "topic": "IoT/{aquarium_id}/sensors/lightsensor",
+              "type": "Publisher"
+            }
+          ]
+        },
+        {
+          "serviceType": "REST",
+          "serviceIP": "adafruit161.org:8080"
+        }
+      ],
+      "connectedTo": "Arduino",
+      "port": "A0",
+      "lastUpdate": "2023-08-13"
+    },
+    {
+      "deviceName": "AnalogButton",
+      "measureType": [
+        "FeedingButton"
+      ],
+      "availableServices": [
+        "MQTT"
+      ],
+      "servicesDetails": [
+        {
+          "serviceType": "MQTT",
+          "topics": [
+            {
+              "topic": "IoT/{aquarium_id}/sensors/button",
+              "type": "Publisher"
+            }
+          ]
+        }
+      ],
+      "connectedTo": "RaspberryPi",
+      "port": "10",
+      "lastUpdate": "2023-08-13"
+    }
+  ],
+  "devicesList": {
+    "1":{
+      "deviceID": 1,
+      "deviceName": "DHT11",
+      "measureType": [
+        "Temperature"
+      ],
+      "availableServices": [
+        "MQTT",
+        "REST"
+      ],
+      "servicesDetails": [
+        {
+          "serviceType": "MQTT",
+          "topics": [
+            {
+              "topic": "IoT/1/sensors/temperature",
+              "type": "Publisher"
+            }
+          ]
+        },
+        {
+          "serviceType": "REST",
+          "serviceIP": "dht11.org:8080"
+        }
+      ],
+      "connectedTo": "Arduino",
+      "port": "17",
+      "lastUpdate": "2023-08-13"
+    },
+    "2": {
+      "deviceID": 2,
+      "deviceName": "HALJIA",
+      "measureType": [
+        "Water Level"
+      ],
+      "availableServices": [
+        "MQTT",
+        "REST"
+      ],
+      "servicesDetails": [
+        {
+          "serviceType": "MQTT",
+          "topics": [
+            {
+              "topic": "IoT/1/sensors/waterlevel",
+              "type": "Publisher"
+            }
+          ]
+        },
+        {
+          "serviceType": "REST",
+          "serviceIP": "haljia.org:8080"
+        }
+      ],
+      "connectedTo": "Arduino",
+      "port": "A1",
+      "lastUpdate": "2023-08-13"
+    },
+    "3": {
+      "deviceID": 3,
+      "deviceName": "Adafruit161",
+      "measureType": [
+        "Light"
+      ],
+      "availableServices": [
+        "MQTT",
+        "REST"
+      ],
+      "servicesDetails": [
+        {
+          "serviceType": "MQTT",
+          "topics": [
+            {
+              "topic": "IoT/1/sensors/lightsensor",
+              "type": "Publisher"
+            }
+          ]
+        },
+        {
+          "serviceType": "REST",
+          "serviceIP": "adafruit161.org:8080"
+        }
+      ],
+      "connectedTo": "Arduino",
+      "port": "A0",
+      "lastUpdate": "2023-08-13"
+    },
+    "4": {
+      "deviceID": 4,
+      "deviceName": "AnalogButton",
+      "measureType": [
+        "FeedingButton"
+      ],
+      "availableServices": [
+        "MQTT"
+      ],
+      "servicesDetails": [
+        {
+          "serviceType": "MQTT",
+          "topics": [
+            {
+              "topic": "IoT/1/sensors/button",
+              "type": "Publisher"
+            }
+          ]
+        }
+      ],
+      "connectedTo": "RaspberryPi",
+      "port": "10",
+      "lastUpdate": "2023-08-13"
+    }
+  },
+  "last_updated": "2023-08-12 13:11:43"
+}

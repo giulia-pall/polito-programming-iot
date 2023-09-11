@@ -1,0 +1,170 @@
+{
+    "projectOwner": "Group_nine",
+    "projectName": "SmartAquarium",
+    "last_updated": "2023-08-27 10:25:13",
+    "topicAdd": "IoT/telegram/entity/add",
+    "statisticsSub": "IoT/{aquarium_id}/telegram/statistics",
+    "address": {
+        "host": "127.0.0.1",
+        "port": 8080
+    },
+    "usersList": {
+        "1": {
+            "userID": 1,
+            "chatID": 164761679,
+            "aquariums": [
+                "1"
+            ]
+        }
+    },
+    "aquariumList": {
+        "1": {
+            "aquariumID": 1,
+            "devicesList": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "chatID": [
+                164761679
+            ],
+            "feedTime": "22:32",
+            "feedSchedule": 5,
+            "changed": true
+        }
+    },
+    "thingspeak": {
+        "1": {
+            "key": "ASGRXGIK2THFOBZC",
+            "channel": "2249248",
+            "topic": "IoT/1/sensors",
+            "dashboardURL": "https://thingspeak.com/channels/2249248"
+        },
+        "2": {
+            "key": "U9WNHW7BJ7BFLVYO",
+            "channel": "2252693",
+            "topic": "IoT/2/sensors",
+            "dashboardURL": "https://thingspeak.com/channels/2252693"
+        },
+        "3": {
+            "key": "ASGRXGIK2THFOBZC",
+            "channel": "2153148",
+            "topic": "IoT/3/sensors",
+            "dashboardURL": "https://thingspeak.com/channels/2153148"
+        },
+        "4": {
+            "key": "ASGRXGIK2THFOBZC",
+            "channel": "2153148",
+            "topic": "IoT/4/sensors",
+            "dashboardURL": "https://thingspeak.com/channels/2153148"
+        }
+    },
+    "telegram": {
+        "token": "5856228020:AAEART2jj17Z8Rc3ypmNAJT5wpNSGkUIU_c",
+        "brokerIP": "mqtt.eclipseprojects.io",
+        "brokerPort": 1883,
+        "mqttTopic": "IoT_project"
+    },
+    "controllersList": {
+        "1": {
+            "controllerID": 1,
+            "aquariumID": 1,
+            "name": "LightSwitch",
+            "topics": [
+                {
+                    "topic": "IoT/1/sensors/lightsensor",
+                    "type": "Subscriber"
+                },
+                {
+                    "topic": "IoT/1/telegram/light",
+                    "type": "Publisher"
+                },
+                {
+                    "topic": "IoT/1/control/light",
+                    "type": "Publisher"
+                },
+                {
+                    "topic": "IoT/statistics/light",
+                    "type": "Publisher"
+                }
+            ]
+        },
+        "2": {
+            "controllerID": 2,
+            "aquariumID": 1,
+            "name": "Heater",
+            "topics": [
+                {
+                    "topic": "IoT/1/sensors/temperature",
+                    "type": "Subscriber"
+                },
+                {
+                    "topic": "IoT/1/telegram/temperature",
+                    "type": "Publisher"
+                },
+                {
+                    "topic": "IoT/1/sensors/heater",
+                    "type": "Publisher"
+                },
+                {
+                    "topic": "IoT/statistics/temperature",
+                    "type": "Publisher"
+                }
+            ]
+        },
+        "3": {
+            "controllerID": 3,
+            "aquariumID": 1,
+            "name": "FeedingControl",
+            "topics": [
+                {
+                    "topic": "IoT/1/control/feeding",
+                    "type": "Publisher"
+                },
+                {
+                    "topic": "IoT/1/telegram/feedingsettings",
+                    "type": "Subscriber"
+                },
+                {
+                    "topic": "IoT/1/sensors/button",
+                    "type": "Subscriber"
+                }
+            ]
+        },
+        "4": {
+            "controllerID": 4,
+            "aquariumID": 1,
+            "name": "WaterLevelControl",
+            "topics": [
+                {
+                    "topic": "IoT/1/sensors/waterlevel",
+                    "type": "Subscriber"
+                },
+                {
+                    "topic": "IoT/1/telegram/waterlevel",
+                    "type": "Publisher"
+                },
+                {
+                    "topic": "IoT/statistics/waterlevel",
+                    "type": "Publisher"
+                }
+            ]
+        },
+        "5": {
+            "controllerID": 5,
+            "aquariumID": 1,
+            "name": "StatisticalControl",
+            "topics": [
+                {
+                    "topic": "IoT/1/statistics",
+                    "type": "Subscriber"
+                },
+                {
+                    "topic": "IoT/1/telegram/statistics",
+                    "type": "Publisher"
+                }
+            ]
+        }
+    }
+}

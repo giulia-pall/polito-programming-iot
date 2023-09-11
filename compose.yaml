@@ -1,0 +1,35 @@
+services:
+  catalog:
+    build:
+      context: ./CATALOG
+    restart: always
+    ports:
+      - 8080:8080
+    volumes:
+      - catalog:/app
+  telegram:
+    build:
+      context: ./TELEGRAM
+    restart: always
+    env_file:
+      - environment.env
+    depends_on:
+      - adaptor
+  controllers:
+    build:
+      context: ./CONTROLLERS
+    restart: always
+    env_file:
+      - environment.env
+    depends_on:
+      - catalog
+  adaptor:
+    build:
+      context: ./ADAPTOR
+    restart: always
+    env_file:
+      - environment.env
+    depends_on:
+      - controllers
+volumes:
+  catalog:

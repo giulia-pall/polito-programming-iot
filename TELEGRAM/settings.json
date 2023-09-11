@@ -1,0 +1,6 @@
+{
+    "telegramToken": "5856228020:AAEART2jj17Z8Rc3ypmNAJT5wpNSGkUIU_c",
+    "brokerIP": "mqtt.eclipseprojects.io",
+    "brokerPort": 1883,
+    "mqttTopic": "IoT_project"
+}
